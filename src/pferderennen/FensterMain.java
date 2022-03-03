@@ -4,6 +4,7 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JTextArea;
 import javax.swing.Timer;
 
 public class FensterMain extends JFrame  {
@@ -11,6 +12,7 @@ public class FensterMain extends JFrame  {
     private Rennbahn rennBahn = new Rennbahn();
     private JButton startButton = new JButton();
     private Timer t;
+    private JTextArea txaRangliste = new JTextArea();
     
     public FensterMain() {
 
@@ -24,8 +26,15 @@ public class FensterMain extends JFrame  {
         
         this.add(rennBahn);
         
-        startButton.setSize(120, 30 );
-        startButton.setLocation(15, 330);
+        txaRangliste.setSize(290, 175);
+        txaRangliste.setLocation(475, 325);
+        txaRangliste.setText("Rangliste");
+        txaRangliste.setEditable(false);
+          txaRangliste.setVisible(true);
+        this.add(txaRangliste);
+        
+        startButton.setSize(120, 30);
+        startButton.setLocation(15, 325);
         startButton.setText("Start");
         this.add(startButton);
         
@@ -50,7 +59,7 @@ public class FensterMain extends JFrame  {
                 t.stop();
                 
         }
-            
+            txaRangliste.setText(rennBahn.Leaderboard());
         }
                     
     }

@@ -5,7 +5,7 @@ import javax.swing.JPanel;
 
 class Rennbahn extends JPanel {
     
-    Pferd pferde[] = new Pferd[10+1];
+    Pferd pferde[] = new Pferd[10];
     
     
     public Rennbahn() {
@@ -23,7 +23,7 @@ class Rennbahn extends JPanel {
     }
     public String Leaderboard() {
         Pferd ps[] = this.pferde;
-        
+        String ausgabe = "";
         Pferd temp;
 	for(int i=1; i<ps.length; i++) {
           
@@ -40,8 +40,10 @@ class Rennbahn extends JPanel {
             }
         }
 
-        
-        return "Rangliste";
+        for (int i = 0; i < ps.length; i++) {
+            ausgabe += (i +1) + "\t" + ps[i].getName() +"\t" + ps[i].getText() + "\n";
+        }
+        return ausgabe;
         
     }
    

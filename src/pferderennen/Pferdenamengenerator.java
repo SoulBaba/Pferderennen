@@ -10,6 +10,6 @@ class Pferdenamengenerator {
 
     public String getName() {
         Random rnd = new Random();
-        return vorname[rnd.nextInt(vorname.length)] + " " + nachname.length;
+        return vorname[rnd.nextInt(vorname.length)] + " " + nachname [rnd.nextInt(nachname.length)];
     }
 }

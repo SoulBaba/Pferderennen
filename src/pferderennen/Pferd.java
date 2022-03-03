@@ -40,6 +40,10 @@ class Pferd extends JLabel {
         }
         this.setLocation(this.getX() + zahlchen, 30 * nummer + 10);
     }
+
+    public String getName() {
+        return name;
+    }
   
     
 }
