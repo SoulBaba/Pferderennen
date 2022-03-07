@@ -41,7 +41,7 @@ class Rennbahn extends JPanel {
         }
 
         for (int i = 0; i < ps.length; i++) {
-            ausgabe += (i +1) + ". " + ps[i].getName() +"       [" + ps[i].getText() + "]" + "\n";
+            ausgabe += (i +1) + ". " + ps[i].getName() +"\t         [" + ps[i].getText() + "]" + "\n";
         }
         return ausgabe;
         
@@ -57,5 +57,11 @@ class Rennbahn extends JPanel {
          }
         return isfinish;
     }  
+     public void nochmal() {
+         for (int i = 0; i < pferde.length; i++) {
+             pferde[i].reset();
+         }
+     }
+
 }
 
