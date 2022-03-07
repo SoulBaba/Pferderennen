@@ -2,6 +2,7 @@ package pferderennen;
 
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
+import javafx.scene.paint.Color;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
@@ -30,7 +31,8 @@ public class FensterMain extends JFrame  {
         txaRangliste.setLocation(475, 325);
         txaRangliste.setText("Rangliste");
         txaRangliste.setEditable(false);
-          txaRangliste.setVisible(true);
+        txaRangliste.setVisible(true);
+ 
         this.add(txaRangliste);
         
         startButton.setSize(120, 30);
@@ -48,6 +50,7 @@ public class FensterMain extends JFrame  {
     
     }
         public void StarteRennen() {
+            rennBahn.nochmal();
             t = new Timer(50, (ActionEvent ae) -> {
                 this.GameLoop();
             });
@@ -55,12 +58,15 @@ public class FensterMain extends JFrame  {
             startButton.setEnabled(false);
                 startButton.setText("läuft...");
 
+        
         }
+        
+        
 
         public void GameLoop() {
             if (rennBahn.bewegPferde()) {
                 t.stop();
-        startButton.setEnabled(true);          
+                startButton.setEnabled(true);          
                 startButton.setText("Start");
         }
             txaRangliste.setText(rennBahn.Leaderboard());
