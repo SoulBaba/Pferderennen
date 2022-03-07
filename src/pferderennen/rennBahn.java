@@ -41,7 +41,7 @@ class Rennbahn extends JPanel {
         }
 
         for (int i = 0; i < ps.length; i++) {
-            ausgabe += (i +1) + "\t" + ps[i].getName() +"\t" + ps[i].getText() + "\n";
+            ausgabe += (i +1) + ". " + ps[i].getName() +"       [" + ps[i].getText() + "]" + "\n";
         }
         return ausgabe;
         
