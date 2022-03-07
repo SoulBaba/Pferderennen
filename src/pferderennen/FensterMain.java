@@ -40,8 +40,9 @@ public class FensterMain extends JFrame  {
         
          startButton.addActionListener((ActionEvent ae) -> {
              this.StarteRennen();
-         });
+             });
          
+        
     
     
     
@@ -51,13 +52,16 @@ public class FensterMain extends JFrame  {
                 this.GameLoop();
             });
             t.start();
-        
+            startButton.setEnabled(false);
+                startButton.setText("läuft...");
+
         }
 
         public void GameLoop() {
             if (rennBahn.bewegPferde()) {
                 t.stop();
-                
+        startButton.setEnabled(true);          
+                startButton.setText("Start");
         }
             txaRangliste.setText(rennBahn.Leaderboard());
         }

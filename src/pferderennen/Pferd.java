@@ -21,9 +21,6 @@ class Pferd extends JLabel {
         this.setSize(20, 20);
         this.setText("" + nummer);
         
-        this.sprung = zahlchen = rnd.nextInt(5)-2;
-        zahlchen = rnd.nextInt(9)+4;
-        
         Pferdenamengenerator pf = new Pferdenamengenerator();
         this.name = pf.getName();
         
@@ -44,6 +41,5 @@ class Pferd extends JLabel {
     public String getName() {
         return name;
     }
-  
-    
+
 }
