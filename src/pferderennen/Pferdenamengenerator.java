@@ -4,8 +4,8 @@ import java.util.Random;
 
 class Pferdenamengenerator {
 
-    private String vorname[] = {"Alter Sack","Uwe", "Sergej", "Siegfried", "Thomas", "BlueThorn", "Olaf", "Sandra", "LichtGlitzer", "Destruss39"};
-    private String nachname[] = {"1", "ölli", "Mönstros", "Ludolff", "Kühlschrank" , "144hz", "Wireless", "Shroud", "SCREAM", "Lappen"};
+    private String vorname[] = {"Alter Sack","Uwchen", "Sergej", "Siegfried", "Thomas", "BlueThorn", "Olaf", "Sandra", "LichtGlitzer", "Destruss39"};
+    private String nachname[] = {"swoinmann", "Petersen", "Mönstros", "Ludolff", "Kühlschrank" , "144hz Monitor", "Wireless", "Shroud", "SCREAM", "Lappen"};
 
 
     public String getName() {
