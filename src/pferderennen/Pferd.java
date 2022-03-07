@@ -27,19 +27,27 @@ class Pferd extends JLabel {
         this.setLocation(10, 30 * nummer + 10);
         this.setOpaque(true);
         this.setBackground(farbe);
+        
+      
   
     }               
 
     public void bewegDich(int ziellinie) {
-        int zahlchen = rnd.nextInt(5+sprung) + 2;
+        int sprung = rnd.nextInt(1)+3;
+        int zahlchen = rnd.nextInt(2+sprung)+2;
         if (this.getX() > ziellinie) {
             zahlchen = 10;
         }
         this.setLocation(this.getX() + zahlchen, 30 * nummer + 10);
+        
     }
-
+    
     public String getName() {
         return name;
     }
+    
+     public void reset() {
+         this.setLocation(10, 30 * nummer + 10);
+     }
 
 }
