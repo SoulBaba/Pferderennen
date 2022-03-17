@@ -4,6 +4,7 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import javafx.scene.paint.Color;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
 import javax.swing.Timer;
@@ -13,7 +14,13 @@ public class FensterMain extends JFrame  {
     private Rennbahn rennBahn = new Rennbahn();
     private JButton startButton = new JButton();
     private Timer t;
+    
+    private Wetten cboWetten = new Wetten();
+
+    private JComboBox cboPferdeliste = new JComboBox();
+    
     private JTextArea txaRangliste = new JTextArea();
+
     
     public FensterMain() {
 
@@ -22,10 +29,11 @@ public class FensterMain extends JFrame  {
         this.setTitle("Pferderennen");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        this.pack();
-        this.setVisible(true);
-        
         this.add(rennBahn);
+          
+        this.add(cboWetten);
+        
+        this.add(cboPferdeliste);
         
         txaRangliste.setSize(290, 175);
         txaRangliste.setLocation(475, 325);
@@ -40,13 +48,14 @@ public class FensterMain extends JFrame  {
         startButton.setText("Start");
         this.add(startButton);
         
+        
          startButton.addActionListener((ActionEvent ae) -> {
              this.StarteRennen();
              });
          
-        
-    
-    
+         
+         this.pack();
+         this.setVisible(true);
     
     }
         public void StarteRennen() {
